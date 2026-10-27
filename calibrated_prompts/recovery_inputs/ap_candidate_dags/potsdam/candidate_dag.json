@@ -1,0 +1,319 @@
+{
+  "schema": "ap_dag_candidate_dag_v1",
+  "dataset": "potsdam",
+  "candidate_source": "analysis/potsdam_candidates.json",
+  "candidate_source_sha256": "f095af94fb106b2fc3005c19507ceacb88143e79955de06805dfd97cb2ecd2bb",
+  "native_source": "configs/classes/cls_potsdam.txt",
+  "native_source_sha256": "2079022a686f911fac382cb6705777521817bf61cbebfeda84273b70782f00af",
+  "source_metadata": {
+    "schema": null,
+    "labels_used": false,
+    "validation_used": false
+  },
+  "max_depth": 3,
+  "native_anchors_immutable": true,
+  "nodes": [
+    {
+      "id": "c0:native:road",
+      "phrase": "road",
+      "target_class": "road",
+      "class_index": 0,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_potsdam.txt",
+      "immutable": true
+    },
+    {
+      "id": "c0:d1:path",
+      "phrase": "path",
+      "target_class": "road",
+      "class_index": 0,
+      "parent": "c0:native:road",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:sidewalk",
+      "phrase": "sidewalk",
+      "target_class": "road",
+      "class_index": 0,
+      "parent": "c0:native:road",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:asphalt_road",
+      "phrase": "asphalt road",
+      "target_class": "road",
+      "class_index": 0,
+      "parent": "c0:native:road",
+      "depth": 1,
+      "relation": "material",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:traffic_lane",
+      "phrase": "traffic lane",
+      "target_class": "road",
+      "class_index": 0,
+      "parent": "c0:native:road",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:native:building",
+      "phrase": "building",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_potsdam.txt",
+      "immutable": true
+    },
+    {
+      "id": "c1:d1:house",
+      "phrase": "house",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": "c1:native:building",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:roof",
+      "phrase": "roof",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": "c1:native:building",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:native:grass",
+      "phrase": "grass",
+      "target_class": "grass",
+      "class_index": 2,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_potsdam.txt",
+      "immutable": true
+    },
+    {
+      "id": "c2:d1:grey_grassland",
+      "phrase": "grey grassland",
+      "target_class": "grass",
+      "class_index": 2,
+      "parent": "c2:native:grass",
+      "depth": 1,
+      "relation": "appearance",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:lawn",
+      "phrase": "lawn",
+      "target_class": "grass",
+      "class_index": 2,
+      "parent": "c2:native:grass",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:low_vegetation",
+      "phrase": "low vegetation",
+      "target_class": "grass",
+      "class_index": 2,
+      "parent": "c2:native:grass",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:native:tree",
+      "phrase": "tree",
+      "target_class": "tree",
+      "class_index": 3,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_potsdam.txt",
+      "immutable": true
+    },
+    {
+      "id": "c3:d1:forest_tree",
+      "phrase": "forest tree",
+      "target_class": "tree",
+      "class_index": 3,
+      "parent": "c3:native:tree",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:tree_canopy",
+      "phrase": "tree canopy",
+      "target_class": "tree",
+      "class_index": 3,
+      "parent": "c3:native:tree",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:native:car",
+      "phrase": "car",
+      "target_class": "car",
+      "class_index": 4,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_potsdam.txt",
+      "immutable": true
+    },
+    {
+      "id": "c4:d1:vehicle",
+      "phrase": "vehicle",
+      "target_class": "car",
+      "class_index": 4,
+      "parent": "c4:native:car",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:automobile",
+      "phrase": "automobile",
+      "target_class": "car",
+      "class_index": 4,
+      "parent": "c4:native:car",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:native:clutter",
+      "phrase": "clutter",
+      "target_class": "clutter",
+      "class_index": 5,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_potsdam.txt",
+      "immutable": true
+    },
+    {
+      "id": "c5:d1:mixed",
+      "phrase": "mixed",
+      "target_class": "clutter",
+      "class_index": 5,
+      "parent": "c5:native:clutter",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:scattered",
+      "phrase": "scattered",
+      "target_class": "clutter",
+      "class_index": 5,
+      "parent": "c5:native:clutter",
+      "depth": 1,
+      "relation": "appearance",
+      "source": "analysis/potsdam_candidates.json",
+      "immutable": false
+    }
+  ],
+  "classes": [
+    {
+      "class_index": 0,
+      "class_name": "road",
+      "native_anchor_ids": [
+        "c0:native:road"
+      ],
+      "candidate_child_ids": [
+        "c0:d1:path",
+        "c0:d1:sidewalk",
+        "c0:d1:asphalt_road",
+        "c0:d1:traffic_lane"
+      ]
+    },
+    {
+      "class_index": 1,
+      "class_name": "building",
+      "native_anchor_ids": [
+        "c1:native:building"
+      ],
+      "candidate_child_ids": [
+        "c1:d1:house",
+        "c1:d1:roof"
+      ]
+    },
+    {
+      "class_index": 2,
+      "class_name": "grass",
+      "native_anchor_ids": [
+        "c2:native:grass"
+      ],
+      "candidate_child_ids": [
+        "c2:d1:grey_grassland",
+        "c2:d1:lawn",
+        "c2:d1:low_vegetation"
+      ]
+    },
+    {
+      "class_index": 3,
+      "class_name": "tree",
+      "native_anchor_ids": [
+        "c3:native:tree"
+      ],
+      "candidate_child_ids": [
+        "c3:d1:forest_tree",
+        "c3:d1:tree_canopy"
+      ]
+    },
+    {
+      "class_index": 4,
+      "class_name": "car",
+      "native_anchor_ids": [
+        "c4:native:car"
+      ],
+      "candidate_child_ids": [
+        "c4:d1:vehicle",
+        "c4:d1:automobile"
+      ]
+    },
+    {
+      "class_index": 5,
+      "class_name": "clutter",
+      "native_anchor_ids": [
+        "c5:native:clutter"
+      ],
+      "candidate_child_ids": [
+        "c5:d1:mixed",
+        "c5:d1:scattered"
+      ]
+    }
+  ]
+}

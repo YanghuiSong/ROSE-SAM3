@@ -1,0 +1,396 @@
+{
+  "schema": "ap_dag_candidate_dag_v1",
+  "dataset": "vdd",
+  "candidate_source": "bundled response-screening candidate DAG",
+  "native_source": "calibrated_prompts/recovery_inputs/ov3_anchors/cls_vdd.txt",
+  "source_metadata": {
+    "labels_used": false,
+    "validation_used": false
+  },
+  "max_depth": 3,
+  "native_anchors_immutable": true,
+  "nodes": [
+    {
+      "id": "c0:native:background",
+      "phrase": "background",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c0:d1:other",
+      "phrase": "other",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:clutter",
+      "phrase": "clutter",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c1:native:facade",
+      "phrase": "facade",
+      "target_class": "facade",
+      "class_index": 1,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c1:d1:wall",
+      "phrase": "wall",
+      "target_class": "facade",
+      "class_index": 1,
+      "parent": "c1:native:facade",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:exterior_walls",
+      "phrase": "Exterior walls",
+      "target_class": "facade",
+      "class_index": 1,
+      "parent": "c1:native:facade",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:exterior_wall",
+      "phrase": "exterior wall",
+      "target_class": "facade",
+      "class_index": 1,
+      "parent": "c1:native:facade",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c2:native:road",
+      "phrase": "road",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c2:d1:paved",
+      "phrase": "paved",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "material",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:connected",
+      "phrase": "connected",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:paved_surface",
+      "phrase": "paved surface",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c3:native:vegetation",
+      "phrase": "vegetation",
+      "target_class": "vegetation",
+      "class_index": 3,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c3:d1:tree",
+      "phrase": "tree",
+      "target_class": "vegetation",
+      "class_index": 3,
+      "parent": "c3:native:vegetation",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:green_vegetation",
+      "phrase": "green vegetation",
+      "target_class": "vegetation",
+      "class_index": 3,
+      "parent": "c3:native:vegetation",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:plant_cover",
+      "phrase": "plant cover",
+      "target_class": "vegetation",
+      "class_index": 3,
+      "parent": "c3:native:vegetation",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c4:native:vehicle",
+      "phrase": "vehicle",
+      "target_class": "vehicle",
+      "class_index": 4,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c4:d1:car",
+      "phrase": "car",
+      "target_class": "vehicle",
+      "class_index": 4,
+      "parent": "c4:native:vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:automobile",
+      "phrase": "automobile",
+      "target_class": "vehicle",
+      "class_index": 4,
+      "parent": "c4:native:vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:small_vehicle",
+      "phrase": "small vehicle",
+      "target_class": "vehicle",
+      "class_index": 4,
+      "parent": "c4:native:vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c5:native:roof",
+      "phrase": "roof",
+      "target_class": "roof",
+      "class_index": 5,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c5:d1:rooftop",
+      "phrase": "rooftop",
+      "target_class": "roof",
+      "class_index": 5,
+      "parent": "c5:native:roof",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:rooftops",
+      "phrase": "Rooftops",
+      "target_class": "roof",
+      "class_index": 5,
+      "parent": "c5:native:roof",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:roof_surface",
+      "phrase": "roof surface",
+      "target_class": "roof",
+      "class_index": 5,
+      "parent": "c5:native:roof",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c6:native:water",
+      "phrase": "water",
+      "target_class": "water",
+      "class_index": 6,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c6:d1:river",
+      "phrase": "river",
+      "target_class": "water",
+      "class_index": 6,
+      "parent": "c6:native:water",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c6:d1:lake",
+      "phrase": "lake",
+      "target_class": "water",
+      "class_index": 6,
+      "parent": "c6:native:water",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c6:d1:water_body",
+      "phrase": "water body",
+      "target_class": "water",
+      "class_index": 6,
+      "parent": "c6:native:water",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    }
+  ],
+  "classes": [
+    {
+      "class_index": 0,
+      "class_name": "background",
+      "native_anchor_ids": [
+        "c0:native:background"
+      ],
+      "candidate_child_ids": [
+        "c0:d1:other",
+        "c0:d1:clutter"
+      ]
+    },
+    {
+      "class_index": 1,
+      "class_name": "facade",
+      "native_anchor_ids": [
+        "c1:native:facade"
+      ],
+      "candidate_child_ids": [
+        "c1:d1:wall",
+        "c1:d1:exterior_walls",
+        "c1:d1:exterior_wall"
+      ]
+    },
+    {
+      "class_index": 2,
+      "class_name": "road",
+      "native_anchor_ids": [
+        "c2:native:road"
+      ],
+      "candidate_child_ids": [
+        "c2:d1:paved",
+        "c2:d1:connected",
+        "c2:d1:paved_surface"
+      ]
+    },
+    {
+      "class_index": 3,
+      "class_name": "vegetation",
+      "native_anchor_ids": [
+        "c3:native:vegetation"
+      ],
+      "candidate_child_ids": [
+        "c3:d1:tree",
+        "c3:d1:green_vegetation",
+        "c3:d1:plant_cover"
+      ]
+    },
+    {
+      "class_index": 4,
+      "class_name": "vehicle",
+      "native_anchor_ids": [
+        "c4:native:vehicle"
+      ],
+      "candidate_child_ids": [
+        "c4:d1:car",
+        "c4:d1:automobile",
+        "c4:d1:small_vehicle"
+      ]
+    },
+    {
+      "class_index": 5,
+      "class_name": "roof",
+      "native_anchor_ids": [
+        "c5:native:roof"
+      ],
+      "candidate_child_ids": [
+        "c5:d1:rooftop",
+        "c5:d1:rooftops",
+        "c5:d1:roof_surface"
+      ]
+    },
+    {
+      "class_index": 6,
+      "class_name": "water",
+      "native_anchor_ids": [
+        "c6:native:water"
+      ],
+      "candidate_child_ids": [
+        "c6:d1:river",
+        "c6:d1:lake",
+        "c6:d1:water_body"
+      ]
+    }
+  ]
+}

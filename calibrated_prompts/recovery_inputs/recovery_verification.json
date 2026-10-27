@@ -1,0 +1,84 @@
+{
+  "verification_date": "2026-10-25",
+  "mode": "eight isolated default-entry DAG selection replays on recorded SAM3 response caches",
+  "frozen_banks_copied_to_isolated_sources": false,
+  "all_eight_exact": true,
+  "new_model_forwards_in_selection_audit": 0,
+  "full_dataset_segmentation_metrics_evaluated": false,
+  "sam3_commit": "a13e358df479a80938c8bfed0e0754bea8fdb277",
+  "isaid_query_count": 25,
+  "datasets": {
+    "udd5": {
+      "class_count": 5,
+      "final_query_count": 12,
+      "exact_match": true,
+      "generated_sha256": "88736166b4ec1e0a30108b7f0fbb0811603899849d457646d1f6b4ba132f3a79",
+      "base_image_count": 40,
+      "residual_image_count": 120,
+      "selector_stages": 2
+    },
+    "openearthmap": {
+      "class_count": 9,
+      "final_query_count": 18,
+      "exact_match": true,
+      "generated_sha256": "7c71a0095e356e08c062a91f82fc0c246b3c192ee2525fe2a8947218eb903662",
+      "base_image_count": 192,
+      "residual_image_count": 512,
+      "selector_stages": 2
+    },
+    "vdd": {
+      "class_count": 7,
+      "final_query_count": 15,
+      "exact_match": true,
+      "generated_sha256": "4f4a2061b92f65d525fbd24c3882065cbc2d690082b7ee0921db3382ccd3e8e9",
+      "base_image_count": 40,
+      "residual_image_count": 280,
+      "selector_stages": 2
+    },
+    "potsdam": {
+      "class_count": 6,
+      "final_query_count": 13,
+      "exact_match": true,
+      "generated_sha256": "68964e6ab49ebf9825d45f76475d01da55351b039933ad778f16a27986ff1f72",
+      "base_image_count": 40,
+      "residual_image_count": 512,
+      "selector_stages": 2
+    },
+    "vaihingen": {
+      "class_count": 6,
+      "final_query_count": 17,
+      "exact_match": true,
+      "generated_sha256": "79d6b2d5e16e43d0e52dd4d9f3e3daf6015fda0fd6d432da6c327f4001d3c2a5",
+      "base_image_count": 40,
+      "residual_image_count": 344,
+      "selector_stages": 2
+    },
+    "uavid": {
+      "class_count": 7,
+      "final_query_count": 25,
+      "exact_match": true,
+      "generated_sha256": "59760bfe9d9ac57f5a74b81a483f1382ad288d78718cd892616b52a982915d66",
+      "base_image_count": 34,
+      "residual_image_count": 34,
+      "selector_stages": 2
+    },
+    "loveda": {
+      "class_count": 7,
+      "final_query_count": 13,
+      "exact_match": true,
+      "generated_sha256": "613c874a673615b9f72bc51beba2251bae0ab35b93daa98b571285c117ac134a",
+      "base_image_count": 512,
+      "residual_image_count": 512,
+      "selector_stages": 2
+    },
+    "isaid": {
+      "class_count": 16,
+      "final_query_count": 25,
+      "exact_match": true,
+      "generated_sha256": "421d6d1efb3cc25008654522f726c8182f869a68a20ce3dcbc5887c95b07e22e",
+      "base_image_count": 512,
+      "residual_image_count": 0,
+      "selector_stages": 1
+    }
+  }
+}

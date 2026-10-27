@@ -1,0 +1,6 @@
+road,paved,connected
+building,yellow roof,roof structure,roof surface
+grass,red lawn,yard
+tree,forests,red tree
+small vehicle,bright vehicle
+clutter,background

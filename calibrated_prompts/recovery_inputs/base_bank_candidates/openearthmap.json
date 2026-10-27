@@ -1,0 +1,26 @@
+{
+  "banks": [
+    [
+      ["background"],
+      ["bareland", "barren"],
+      ["grass"],
+      ["pavement", "paved area"],
+      ["road", "asphalt road"],
+      ["tree", "forest"],
+      ["water", "river"],
+      ["cropland"],
+      ["building", "roof", "house"]
+    ],
+    [
+      ["background"],
+      ["bareland", "barren"],
+      ["grass"],
+      ["pavement", "paved area"],
+      ["road", "traffic lane"],
+      ["tree", "forest"],
+      ["water", "river"],
+      ["cropland"],
+      ["building", "roof", "house"]
+    ]
+  ]
+}

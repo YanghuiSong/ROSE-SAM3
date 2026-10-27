@@ -1,0 +1,30 @@
+{
+  "banks": [
+    [
+      [
+        "road",
+        "path",
+        "sidewalk"
+      ],
+      [
+        "building"
+      ],
+      [
+        "grass",
+        "grey grassland",
+        "lawn"
+      ],
+      [
+        "tree"
+      ],
+      [
+        "car"
+      ],
+      [
+        "clutter",
+        "mixed",
+        "scattered"
+      ]
+    ]
+  ]
+}

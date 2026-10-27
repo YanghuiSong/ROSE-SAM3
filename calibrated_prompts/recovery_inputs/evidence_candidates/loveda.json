@@ -1,0 +1,82 @@
+{
+  "background": [
+    "background"
+  ],
+  "building": [
+    "building",
+    "house",
+    "building rooftop",
+    "urban building",
+    "building footprint",
+    "rectangular building",
+    "residential building",
+    "industrial building",
+    "building block",
+    "rooftop",
+    "urban roof"
+  ],
+  "road": [
+    "road",
+    "asphalt road",
+    "paved road",
+    "street",
+    "paved surface",
+    "pavement",
+    "path",
+    "sidewalk",
+    "linear road corridor",
+    "connected paved path",
+    "narrow paved road",
+    "road surface"
+  ],
+  "water": [
+    "water",
+    "water body",
+    "river",
+    "pond",
+    "lake",
+    "continuous water surface",
+    "smooth water region",
+    "dark water area",
+    "open water",
+    "canal water",
+    "river basin"
+  ],
+  "barren": [
+    "barren",
+    "bareland",
+    "soil",
+    "bare soil",
+    "wasteland",
+    "exposed earth",
+    "non vegetated soil",
+    "dry bare ground",
+    "open soil patch",
+    "sparse barren land"
+  ],
+  "forest": [
+    "forest",
+    "tree",
+    "dense forest",
+    "natural woodland",
+    "woodland",
+    "forest canopy",
+    "tree covered region",
+    "continuous tree cover",
+    "dense tree canopy",
+    "tree cluster",
+    "natural forest patch"
+  ],
+  "agricultural": [
+    "agricultural",
+    "cropland",
+    "farmland",
+    "cultivated field",
+    "crop field",
+    "planted field",
+    "agriculture land",
+    "field parcel",
+    "rectangular farmland",
+    "rural cultivated area"
+  ]
+}

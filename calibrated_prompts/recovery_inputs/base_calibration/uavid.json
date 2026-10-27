@@ -1,0 +1,92 @@
+{
+  "dataset": "uavid",
+  "stage": "base_bank_dag",
+  "dataset_image_subdir": "img_dir/train",
+  "calibration_split": "train",
+  "labels_used": false,
+  "image_count": 34,
+  "sampling_seed": 42,
+  "relative_images": [
+    "train_000000.png",
+    "train_000001.png",
+    "train_000002.png",
+    "train_000003.png",
+    "train_000004.png",
+    "train_000005.png",
+    "train_000006.png",
+    "train_000007.png",
+    "train_000008.png",
+    "train_000009.png",
+    "train_000010.png",
+    "train_000011.png",
+    "train_000012.png",
+    "train_000013.png",
+    "train_000014.png",
+    "train_000015.png",
+    "train_000016.png",
+    "train_000017.png",
+    "train_000018.png",
+    "train_000019.png",
+    "train_000020.png",
+    "train_000021.png",
+    "train_000022.png",
+    "train_000023.png",
+    "train_000024.png",
+    "train_000025.png",
+    "train_000026.png",
+    "train_000027.png",
+    "train_000028.png",
+    "train_000029.png",
+    "train_000030.png",
+    "train_000031.png",
+    "train_000032.png",
+    "train_000033.png"
+  ],
+  "partitions": {
+    "fold_1": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30
+    ],
+    "fold_2": [
+      1,
+      6,
+      11,
+      16,
+      21,
+      26,
+      31
+    ],
+    "fold_3": [
+      2,
+      7,
+      12,
+      17,
+      22,
+      27,
+      32
+    ],
+    "fold_4": [
+      3,
+      8,
+      13,
+      18,
+      23,
+      28,
+      33
+    ],
+    "fold_5": [
+      4,
+      9,
+      14,
+      19,
+      24,
+      29
+    ]
+  },
+  "protocol_origin": "New train-only protocol approved on 2026-10-24; not the historical 24-test-image cohort"
+}

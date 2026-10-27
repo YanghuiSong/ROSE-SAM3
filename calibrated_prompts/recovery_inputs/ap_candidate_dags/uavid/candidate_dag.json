@@ -1,0 +1,375 @@
+{
+  "schema": "ap_dag_candidate_dag_v1",
+  "dataset": "uavid",
+  "candidate_source": "analysis/uavid_candidates.json",
+  "candidate_source_sha256": "72cc652ff445fda0cc33886c5aee8438ae1fa5179621ff323b591ef77c64cd6b",
+  "native_source": "configs/classes/cls_uavid.txt",
+  "native_source_sha256": "f33f1b914d5417dae1f8ebfdb410cb364e0fcc331a9f1444f59c3eac479ba2ff",
+  "source_metadata": {
+    "schema": null,
+    "labels_used": false,
+    "validation_used": false
+  },
+  "max_depth": 3,
+  "native_anchors_immutable": true,
+  "nodes": [
+    {
+      "id": "c0:native:background",
+      "phrase": "background",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_uavid.txt",
+      "immutable": true
+    },
+    {
+      "id": "c0:d1:other",
+      "phrase": "other",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:cluttered_ground",
+      "phrase": "cluttered ground",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "appearance",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:native:building",
+      "phrase": "building",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_uavid.txt",
+      "immutable": true
+    },
+    {
+      "id": "c1:d1:house",
+      "phrase": "house",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": "c1:native:building",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:roof",
+      "phrase": "roof",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": "c1:native:building",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:building_rooftop",
+      "phrase": "building rooftop",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": "c1:native:building",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:native:road",
+      "phrase": "road",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_uavid.txt",
+      "immutable": true
+    },
+    {
+      "id": "c2:d1:street",
+      "phrase": "street",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:asphalt_road",
+      "phrase": "asphalt road",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "material",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:paved_road",
+      "phrase": "paved road",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "material",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:native:car",
+      "phrase": "car",
+      "target_class": "car",
+      "class_index": 3,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_uavid.txt",
+      "immutable": true
+    },
+    {
+      "id": "c3:d1:vehicle",
+      "phrase": "vehicle",
+      "target_class": "car",
+      "class_index": 3,
+      "parent": "c3:native:car",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:automobile",
+      "phrase": "automobile",
+      "target_class": "car",
+      "class_index": 3,
+      "parent": "c3:native:car",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:native:tree",
+      "phrase": "tree",
+      "target_class": "tree",
+      "class_index": 4,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_uavid.txt",
+      "immutable": true
+    },
+    {
+      "id": "c4:d1:forest_tree",
+      "phrase": "forest tree",
+      "target_class": "tree",
+      "class_index": 4,
+      "parent": "c4:native:tree",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:tree_canopy",
+      "phrase": "tree canopy",
+      "target_class": "tree",
+      "class_index": 4,
+      "parent": "c4:native:tree",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:tall_tree",
+      "phrase": "tall tree",
+      "target_class": "tree",
+      "class_index": 4,
+      "parent": "c4:native:tree",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:native:vegetation",
+      "phrase": "vegetation",
+      "target_class": "vegetation",
+      "class_index": 5,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_uavid.txt",
+      "immutable": true
+    },
+    {
+      "id": "c5:d1:grass",
+      "phrase": "grass",
+      "target_class": "vegetation",
+      "class_index": 5,
+      "parent": "c5:native:vegetation",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:greenery",
+      "phrase": "greenery",
+      "target_class": "vegetation",
+      "class_index": 5,
+      "parent": "c5:native:vegetation",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:low_vegetation",
+      "phrase": "low vegetation",
+      "target_class": "vegetation",
+      "class_index": 5,
+      "parent": "c5:native:vegetation",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c6:native:human",
+      "phrase": "human",
+      "target_class": "human",
+      "class_index": 6,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_uavid.txt",
+      "immutable": true
+    },
+    {
+      "id": "c6:d1:person",
+      "phrase": "person",
+      "target_class": "human",
+      "class_index": 6,
+      "parent": "c6:native:human",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c6:d1:pedestrian",
+      "phrase": "pedestrian",
+      "target_class": "human",
+      "class_index": 6,
+      "parent": "c6:native:human",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/uavid_candidates.json",
+      "immutable": false
+    }
+  ],
+  "classes": [
+    {
+      "class_index": 0,
+      "class_name": "background",
+      "native_anchor_ids": [
+        "c0:native:background"
+      ],
+      "candidate_child_ids": [
+        "c0:d1:other",
+        "c0:d1:cluttered_ground"
+      ]
+    },
+    {
+      "class_index": 1,
+      "class_name": "building",
+      "native_anchor_ids": [
+        "c1:native:building"
+      ],
+      "candidate_child_ids": [
+        "c1:d1:house",
+        "c1:d1:roof",
+        "c1:d1:building_rooftop"
+      ]
+    },
+    {
+      "class_index": 2,
+      "class_name": "road",
+      "native_anchor_ids": [
+        "c2:native:road"
+      ],
+      "candidate_child_ids": [
+        "c2:d1:street",
+        "c2:d1:asphalt_road",
+        "c2:d1:paved_road"
+      ]
+    },
+    {
+      "class_index": 3,
+      "class_name": "car",
+      "native_anchor_ids": [
+        "c3:native:car"
+      ],
+      "candidate_child_ids": [
+        "c3:d1:vehicle",
+        "c3:d1:automobile"
+      ]
+    },
+    {
+      "class_index": 4,
+      "class_name": "tree",
+      "native_anchor_ids": [
+        "c4:native:tree"
+      ],
+      "candidate_child_ids": [
+        "c4:d1:forest_tree",
+        "c4:d1:tree_canopy",
+        "c4:d1:tall_tree"
+      ]
+    },
+    {
+      "class_index": 5,
+      "class_name": "vegetation",
+      "native_anchor_ids": [
+        "c5:native:vegetation"
+      ],
+      "candidate_child_ids": [
+        "c5:d1:grass",
+        "c5:d1:greenery",
+        "c5:d1:low_vegetation"
+      ]
+    },
+    {
+      "class_index": 6,
+      "class_name": "human",
+      "native_anchor_ids": [
+        "c6:native:human"
+      ],
+      "candidate_child_ids": [
+        "c6:d1:person",
+        "c6:d1:pedestrian"
+      ]
+    }
+  ]
+}

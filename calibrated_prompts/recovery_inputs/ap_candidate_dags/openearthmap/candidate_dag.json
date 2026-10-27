@@ -1,0 +1,410 @@
+{
+  "schema": "ap_dag_candidate_dag_v1",
+  "dataset": "openearthmap",
+  "candidate_source": "bundled response-screening candidate DAG",
+  "native_source": "calibrated_prompts/recovery_inputs/ov3_anchors/cls_openearthmap.txt",
+  "source_metadata": {
+    "labels_used": false,
+    "validation_used": false
+  },
+  "max_depth": 3,
+  "native_anchors_immutable": true,
+  "nodes": [
+    {
+      "id": "c0:native:background",
+      "phrase": "background",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c1:native:bareland",
+      "phrase": "bareland",
+      "target_class": "bareland",
+      "class_index": 1,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c1:native:barren",
+      "phrase": "barren",
+      "target_class": "bareland",
+      "class_index": 1,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c1:d1:bare_soil",
+      "phrase": "bare soil",
+      "target_class": "bareland",
+      "class_index": 1,
+      "parent": "c1:native:bareland",
+      "depth": 1,
+      "relation": "material",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:exposed_earth",
+      "phrase": "exposed earth",
+      "target_class": "bareland",
+      "class_index": 1,
+      "parent": "c1:native:bareland",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c2:native:grass",
+      "phrase": "grass",
+      "target_class": "grass",
+      "class_index": 2,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c2:d1:grassland",
+      "phrase": "grassland",
+      "target_class": "grass",
+      "class_index": 2,
+      "parent": "c2:native:grass",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:green_field",
+      "phrase": "green field",
+      "target_class": "grass",
+      "class_index": 2,
+      "parent": "c2:native:grass",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c3:native:pavement",
+      "phrase": "pavement",
+      "target_class": "pavement",
+      "class_index": 3,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c3:d1:paved_area",
+      "phrase": "paved area",
+      "target_class": "pavement",
+      "class_index": 3,
+      "parent": "c3:native:pavement",
+      "depth": 1,
+      "relation": "material",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:concrete_surface",
+      "phrase": "concrete surface",
+      "target_class": "pavement",
+      "class_index": 3,
+      "parent": "c3:native:pavement",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c4:native:road",
+      "phrase": "road",
+      "target_class": "road",
+      "class_index": 4,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c4:d1:asphalt_road",
+      "phrase": "asphalt road",
+      "target_class": "road",
+      "class_index": 4,
+      "parent": "c4:native:road",
+      "depth": 1,
+      "relation": "material",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:traffic_lane",
+      "phrase": "traffic lane",
+      "target_class": "road",
+      "class_index": 4,
+      "parent": "c4:native:road",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c5:native:tree",
+      "phrase": "tree",
+      "target_class": "tree",
+      "class_index": 5,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c5:native:forest",
+      "phrase": "forest",
+      "target_class": "tree",
+      "class_index": 5,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c5:d1:woodland",
+      "phrase": "woodland",
+      "target_class": "tree",
+      "class_index": 5,
+      "parent": "c5:native:tree",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c6:native:water",
+      "phrase": "water",
+      "target_class": "water",
+      "class_index": 6,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c6:native:river",
+      "phrase": "river",
+      "target_class": "water",
+      "class_index": 6,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c6:d1:lake",
+      "phrase": "lake",
+      "target_class": "water",
+      "class_index": 6,
+      "parent": "c6:native:water",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c7:native:cropland",
+      "phrase": "cropland",
+      "target_class": "cropland",
+      "class_index": 7,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c7:d1:farmland",
+      "phrase": "farmland",
+      "target_class": "cropland",
+      "class_index": 7,
+      "parent": "c7:native:cropland",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c7:d1:cultivated_field",
+      "phrase": "cultivated field",
+      "target_class": "cropland",
+      "class_index": 7,
+      "parent": "c7:native:cropland",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c7:d1:agriculture_land",
+      "phrase": "agriculture land",
+      "target_class": "cropland",
+      "class_index": 7,
+      "parent": "c7:native:cropland",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "bundled DAG candidate",
+      "immutable": false
+    },
+    {
+      "id": "c8:native:building",
+      "phrase": "building",
+      "target_class": "building",
+      "class_index": 8,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c8:native:roof",
+      "phrase": "roof",
+      "target_class": "building",
+      "class_index": 8,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    },
+    {
+      "id": "c8:native:house",
+      "phrase": "house",
+      "target_class": "building",
+      "class_index": 8,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "OV3 native anchor",
+      "immutable": true
+    }
+  ],
+  "classes": [
+    {
+      "class_index": 0,
+      "class_name": "background",
+      "native_anchor_ids": [
+        "c0:native:background"
+      ],
+      "candidate_child_ids": []
+    },
+    {
+      "class_index": 1,
+      "class_name": "bareland",
+      "native_anchor_ids": [
+        "c1:native:bareland",
+        "c1:native:barren"
+      ],
+      "candidate_child_ids": [
+        "c1:d1:bare_soil",
+        "c1:d1:exposed_earth"
+      ]
+    },
+    {
+      "class_index": 2,
+      "class_name": "grass",
+      "native_anchor_ids": [
+        "c2:native:grass"
+      ],
+      "candidate_child_ids": [
+        "c2:d1:grassland",
+        "c2:d1:green_field"
+      ]
+    },
+    {
+      "class_index": 3,
+      "class_name": "pavement",
+      "native_anchor_ids": [
+        "c3:native:pavement"
+      ],
+      "candidate_child_ids": [
+        "c3:d1:paved_area",
+        "c3:d1:concrete_surface"
+      ]
+    },
+    {
+      "class_index": 4,
+      "class_name": "road",
+      "native_anchor_ids": [
+        "c4:native:road"
+      ],
+      "candidate_child_ids": [
+        "c4:d1:asphalt_road",
+        "c4:d1:traffic_lane"
+      ]
+    },
+    {
+      "class_index": 5,
+      "class_name": "tree",
+      "native_anchor_ids": [
+        "c5:native:tree",
+        "c5:native:forest"
+      ],
+      "candidate_child_ids": [
+        "c5:d1:woodland"
+      ]
+    },
+    {
+      "class_index": 6,
+      "class_name": "water",
+      "native_anchor_ids": [
+        "c6:native:water",
+        "c6:native:river"
+      ],
+      "candidate_child_ids": [
+        "c6:d1:lake"
+      ]
+    },
+    {
+      "class_index": 7,
+      "class_name": "cropland",
+      "native_anchor_ids": [
+        "c7:native:cropland"
+      ],
+      "candidate_child_ids": [
+        "c7:d1:farmland",
+        "c7:d1:cultivated_field",
+        "c7:d1:agriculture_land"
+      ]
+    },
+    {
+      "class_index": 8,
+      "class_name": "building",
+      "native_anchor_ids": [
+        "c8:native:building",
+        "c8:native:roof",
+        "c8:native:house"
+      ],
+      "candidate_child_ids": []
+    }
+  ]
+}

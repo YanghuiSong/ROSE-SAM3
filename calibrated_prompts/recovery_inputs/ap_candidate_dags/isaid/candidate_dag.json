@@ -1,0 +1,2124 @@
+{
+  "schema": "ap_dag_candidate_dag_v1",
+  "dataset": "isaid",
+  "candidate_source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+  "candidate_source_sha256": "6c02583665adfaee2335f4800a6795f97ae8d2c6b81f7ba92815da9311fc003a",
+  "native_source": "configs/classes/cls_iSAID.txt",
+  "native_source_sha256": "267ff1dceeca40c61038f08c67481f2bc9a9c134440c0a563dc2f58e5e5f74e8",
+  "source_metadata": {
+    "schema": null,
+    "labels_used": false,
+    "validation_used": false
+  },
+  "max_depth": 3,
+  "native_anchors_immutable": true,
+  "nodes": [
+    {
+      "id": "c0:native:background",
+      "phrase": "background",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c0:d1:land_cover",
+      "phrase": "Land Cover",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:clutter",
+      "phrase": "clutter",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:background_clutter",
+      "phrase": "background clutter",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:miscellaneous_object",
+      "phrase": "miscellaneous object",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:scattered_small_objects",
+      "phrase": "scattered small objects",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "appearance",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:cluttered_ground",
+      "phrase": "cluttered ground",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "appearance",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:other",
+      "phrase": "other",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:mixed",
+      "phrase": "mixed",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:sky",
+      "phrase": "sky",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:urban_clutter",
+      "phrase": "urban clutter",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:unstructured_clutter",
+      "phrase": "unstructured clutter",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "appearance",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:unlabeled_background",
+      "phrase": "unlabeled background",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:small_clutter",
+      "phrase": "small clutter",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:scene_clutter",
+      "phrase": "scene clutter",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:scene_background",
+      "phrase": "scene background",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:other_object",
+      "phrase": "other object",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c0:d1:mixed_debris",
+      "phrase": "mixed debris",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": "c0:native:background",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:native:ship",
+      "phrase": "ship",
+      "target_class": "ship",
+      "class_index": 1,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c1:d1:vessel",
+      "phrase": "vessel",
+      "target_class": "ship",
+      "class_index": 1,
+      "parent": "c1:native:ship",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:boat",
+      "phrase": "boat",
+      "target_class": "ship",
+      "class_index": 1,
+      "parent": "c1:native:ship",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:harbor_ship",
+      "phrase": "harbor ship",
+      "target_class": "ship",
+      "class_index": 1,
+      "parent": "c1:native:ship",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:ship_hull",
+      "phrase": "ship hull",
+      "target_class": "ship",
+      "class_index": 1,
+      "parent": "c1:native:ship",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:moored_ship",
+      "phrase": "moored ship",
+      "target_class": "ship",
+      "class_index": 1,
+      "parent": "c1:native:ship",
+      "depth": 1,
+      "relation": "appearance",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:large_vessel",
+      "phrase": "large vessel",
+      "target_class": "ship",
+      "class_index": 1,
+      "parent": "c1:native:ship",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:ship_from_above",
+      "phrase": "ship from above",
+      "target_class": "ship",
+      "class_index": 1,
+      "parent": "c1:native:ship",
+      "depth": 1,
+      "relation": "remote-sensing refinement",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:ship_docking_area",
+      "phrase": "ship docking area",
+      "target_class": "ship",
+      "class_index": 1,
+      "parent": "c1:native:ship",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:native:store_tank",
+      "phrase": "store tank",
+      "target_class": "store tank",
+      "class_index": 2,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c3:native:baseball_diamond",
+      "phrase": "baseball diamond",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c3:d1:tennis_court",
+      "phrase": "tennis court",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:basketball_court",
+      "phrase": "basketball court",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:soccer_ball_field",
+      "phrase": "soccer ball field",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:sports_field",
+      "phrase": "sports field",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:sports_court",
+      "phrase": "sports court",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:sports_diamond",
+      "phrase": "sports diamond",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:baseball_field",
+      "phrase": "baseball field",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:court_surface",
+      "phrase": "court surface",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:baseball_infield",
+      "phrase": "baseball infield",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:rectangular_tennis_court",
+      "phrase": "rectangular tennis court",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:rectangular_basketball_court",
+      "phrase": "rectangular basketball court",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:marked_basketball_court",
+      "phrase": "marked basketball court",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:green_tennis_court",
+      "phrase": "green tennis court",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:diamond_shaped_field",
+      "phrase": "diamond shaped field",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:court_with_boundary_lines",
+      "phrase": "court with boundary lines",
+      "target_class": "baseball diamond",
+      "class_index": 3,
+      "parent": "c3:native:baseball_diamond",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:native:tennis_court",
+      "phrase": "tennis court",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c4:d1:basketball_court",
+      "phrase": "basketball court",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:baseball_diamond",
+      "phrase": "baseball diamond",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:soccer_ball_field",
+      "phrase": "soccer ball field",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:sports_field",
+      "phrase": "sports field",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:sports_court",
+      "phrase": "sports court",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:sports_diamond",
+      "phrase": "sports diamond",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:baseball_field",
+      "phrase": "baseball field",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:court_surface",
+      "phrase": "court surface",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:baseball_infield",
+      "phrase": "baseball infield",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:rectangular_tennis_court",
+      "phrase": "rectangular tennis court",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:rectangular_basketball_court",
+      "phrase": "rectangular basketball court",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:marked_basketball_court",
+      "phrase": "marked basketball court",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:green_tennis_court",
+      "phrase": "green tennis court",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:diamond_shaped_field",
+      "phrase": "diamond shaped field",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:court_with_boundary_lines",
+      "phrase": "court with boundary lines",
+      "target_class": "tennis court",
+      "class_index": 4,
+      "parent": "c4:native:tennis_court",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:native:basketball_court",
+      "phrase": "basketball court",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c5:d1:tennis_court",
+      "phrase": "tennis court",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:baseball_diamond",
+      "phrase": "baseball diamond",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:soccer_ball_field",
+      "phrase": "soccer ball field",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:sports_field",
+      "phrase": "sports field",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:sports_court",
+      "phrase": "sports court",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:sports_diamond",
+      "phrase": "sports diamond",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:baseball_field",
+      "phrase": "baseball field",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:court_surface",
+      "phrase": "court surface",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:baseball_infield",
+      "phrase": "baseball infield",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:rectangular_tennis_court",
+      "phrase": "rectangular tennis court",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:rectangular_basketball_court",
+      "phrase": "rectangular basketball court",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:marked_basketball_court",
+      "phrase": "marked basketball court",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:green_tennis_court",
+      "phrase": "green tennis court",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:diamond_shaped_field",
+      "phrase": "diamond shaped field",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:court_with_boundary_lines",
+      "phrase": "court with boundary lines",
+      "target_class": "basketball court",
+      "class_index": 5,
+      "parent": "c5:native:basketball_court",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c6:native:ground_track_field",
+      "phrase": "ground track field",
+      "target_class": "ground track field",
+      "class_index": 6,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c7:native:bridge",
+      "phrase": "bridge",
+      "target_class": "bridge",
+      "class_index": 7,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c7:d1:road_bridge",
+      "phrase": "road bridge",
+      "target_class": "bridge",
+      "class_index": 7,
+      "parent": "c7:native:bridge",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c7:d1:elevated_bridge",
+      "phrase": "elevated bridge",
+      "target_class": "bridge",
+      "class_index": 7,
+      "parent": "c7:native:bridge",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c7:d1:bridge_deck",
+      "phrase": "bridge deck",
+      "target_class": "bridge",
+      "class_index": 7,
+      "parent": "c7:native:bridge",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c7:d1:linear_bridge_span",
+      "phrase": "linear bridge span",
+      "target_class": "bridge",
+      "class_index": 7,
+      "parent": "c7:native:bridge",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c7:d1:bridge_over_water",
+      "phrase": "bridge over water",
+      "target_class": "bridge",
+      "class_index": 7,
+      "parent": "c7:native:bridge",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:native:large_vehicle",
+      "phrase": "large vehicle",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c8:d1:car",
+      "phrase": "car",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:small_vehicle",
+      "phrase": "small vehicle",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:vehicle_object",
+      "phrase": "vehicle object",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:vehicle",
+      "phrase": "vehicle",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:truck",
+      "phrase": "truck",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:bus",
+      "phrase": "bus",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:parked_vehicle",
+      "phrase": "parked vehicle",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:parked_car",
+      "phrase": "parked car",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:small_car",
+      "phrase": "small car",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:automobile",
+      "phrase": "automobile",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:heavy_vehicle",
+      "phrase": "heavy vehicle",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:cargo_truck",
+      "phrase": "cargo truck",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:vehicle_lane",
+      "phrase": "vehicle lane",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:road_vehicle",
+      "phrase": "road vehicle",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:compact_vehicle",
+      "phrase": "compact vehicle",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:compact_car",
+      "phrase": "compact car",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c8:d1:car_roof",
+      "phrase": "car roof",
+      "target_class": "large vehicle",
+      "class_index": 8,
+      "parent": "c8:native:large_vehicle",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:native:small_vehicle",
+      "phrase": "small vehicle",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c9:d1:car",
+      "phrase": "car",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:vehicle_object",
+      "phrase": "vehicle object",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:vehicle",
+      "phrase": "vehicle",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:parked_vehicle",
+      "phrase": "parked vehicle",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:parked_car",
+      "phrase": "parked car",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:small_car",
+      "phrase": "small car",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:automobile",
+      "phrase": "automobile",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:compact_vehicle",
+      "phrase": "compact vehicle",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:vehicle_lane",
+      "phrase": "vehicle lane",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:road_vehicle",
+      "phrase": "road vehicle",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:heavy_vehicle",
+      "phrase": "heavy vehicle",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:compact_car",
+      "phrase": "compact car",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:car_roof",
+      "phrase": "car roof",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:parked_small_vehicle",
+      "phrase": "parked small vehicle",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:bright_vehicle",
+      "phrase": "bright vehicle",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "appearance",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:vehicle_from_above",
+      "phrase": "vehicle from above",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "remote-sensing refinement",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c9:d1:tiny_vehicle_object",
+      "phrase": "tiny vehicle object",
+      "target_class": "small vehicle",
+      "class_index": 9,
+      "parent": "c9:native:small_vehicle",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c10:native:helicopter",
+      "phrase": "helicopter",
+      "target_class": "helicopter",
+      "class_index": 10,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c10:d1:small_helicopter",
+      "phrase": "small helicopter",
+      "target_class": "helicopter",
+      "class_index": 10,
+      "parent": "c10:native:helicopter",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c10:d1:rotor_aircraft",
+      "phrase": "rotor aircraft",
+      "target_class": "helicopter",
+      "class_index": 10,
+      "parent": "c10:native:helicopter",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c10:d1:helicopter_pad_object",
+      "phrase": "helicopter pad object",
+      "target_class": "helicopter",
+      "class_index": 10,
+      "parent": "c10:native:helicopter",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c10:d1:helicopter_from_above",
+      "phrase": "helicopter from above",
+      "target_class": "helicopter",
+      "class_index": 10,
+      "parent": "c10:native:helicopter",
+      "depth": 1,
+      "relation": "remote-sensing refinement",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c11:native:swimming_pool",
+      "phrase": "swimming pool",
+      "target_class": "swimming pool",
+      "class_index": 11,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c11:d1:water",
+      "phrase": "water",
+      "target_class": "swimming pool",
+      "class_index": 11,
+      "parent": "c11:native:swimming_pool",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c11:d1:pool",
+      "phrase": "pool",
+      "target_class": "swimming pool",
+      "class_index": 11,
+      "parent": "c11:native:swimming_pool",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c11:d1:river",
+      "phrase": "river",
+      "target_class": "swimming pool",
+      "class_index": 11,
+      "parent": "c11:native:swimming_pool",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c11:d1:pond",
+      "phrase": "pond",
+      "target_class": "swimming pool",
+      "class_index": 11,
+      "parent": "c11:native:swimming_pool",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c11:d1:lake",
+      "phrase": "lake",
+      "target_class": "swimming pool",
+      "class_index": 11,
+      "parent": "c11:native:swimming_pool",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c11:d1:water_body",
+      "phrase": "water body",
+      "target_class": "swimming pool",
+      "class_index": 11,
+      "parent": "c11:native:swimming_pool",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c11:d1:river_basin",
+      "phrase": "river basin",
+      "target_class": "swimming pool",
+      "class_index": 11,
+      "parent": "c11:native:swimming_pool",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c11:d1:open_water",
+      "phrase": "open water",
+      "target_class": "swimming pool",
+      "class_index": 11,
+      "parent": "c11:native:swimming_pool",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c11:d1:canal_water",
+      "phrase": "canal water",
+      "target_class": "swimming pool",
+      "class_index": 11,
+      "parent": "c11:native:swimming_pool",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c11:d1:smooth_water_region",
+      "phrase": "smooth water region",
+      "target_class": "swimming pool",
+      "class_index": 11,
+      "parent": "c11:native:swimming_pool",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c11:d1:continuous_water_surface",
+      "phrase": "continuous water surface",
+      "target_class": "swimming pool",
+      "class_index": 11,
+      "parent": "c11:native:swimming_pool",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c11:d1:bridge_over_water",
+      "phrase": "bridge over water",
+      "target_class": "swimming pool",
+      "class_index": 11,
+      "parent": "c11:native:swimming_pool",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c11:d1:dark_water_area",
+      "phrase": "dark water area",
+      "target_class": "swimming pool",
+      "class_index": 11,
+      "parent": "c11:native:swimming_pool",
+      "depth": 1,
+      "relation": "appearance",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c12:native:roundabout",
+      "phrase": "roundabout",
+      "target_class": "roundabout",
+      "class_index": 12,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c12:d1:traffic_circle",
+      "phrase": "traffic circle",
+      "target_class": "roundabout",
+      "class_index": 12,
+      "parent": "c12:native:roundabout",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c12:d1:road_roundabout",
+      "phrase": "road roundabout",
+      "target_class": "roundabout",
+      "class_index": 12,
+      "parent": "c12:native:roundabout",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c12:d1:circular_road_junction",
+      "phrase": "circular road junction",
+      "target_class": "roundabout",
+      "class_index": 12,
+      "parent": "c12:native:roundabout",
+      "depth": 1,
+      "relation": "appearance",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c12:d1:central_traffic_island",
+      "phrase": "central traffic island",
+      "target_class": "roundabout",
+      "class_index": 12,
+      "parent": "c12:native:roundabout",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c13:native:soccer_ball_field",
+      "phrase": "soccer ball field",
+      "target_class": "soccer ball field",
+      "class_index": 13,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c14:native:plane",
+      "phrase": "plane",
+      "target_class": "plane",
+      "class_index": 14,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c14:d1:aircraft",
+      "phrase": "aircraft",
+      "target_class": "plane",
+      "class_index": 14,
+      "parent": "c14:native:plane",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c14:d1:airplane",
+      "phrase": "airplane",
+      "target_class": "plane",
+      "class_index": 14,
+      "parent": "c14:native:plane",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c14:d1:winged_aircraft",
+      "phrase": "winged aircraft",
+      "target_class": "plane",
+      "class_index": 14,
+      "parent": "c14:native:plane",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c14:d1:rotor_aircraft",
+      "phrase": "rotor aircraft",
+      "target_class": "plane",
+      "class_index": 14,
+      "parent": "c14:native:plane",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c14:d1:parked_aircraft",
+      "phrase": "parked aircraft",
+      "target_class": "plane",
+      "class_index": 14,
+      "parent": "c14:native:plane",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c14:d1:airport_plane",
+      "phrase": "airport plane",
+      "target_class": "plane",
+      "class_index": 14,
+      "parent": "c14:native:plane",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c14:d1:aircraft_from_above",
+      "phrase": "aircraft from above",
+      "target_class": "plane",
+      "class_index": 14,
+      "parent": "c14:native:plane",
+      "depth": 1,
+      "relation": "remote-sensing refinement",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c14:d1:bright_roof_plane",
+      "phrase": "bright roof plane",
+      "target_class": "plane",
+      "class_index": 14,
+      "parent": "c14:native:plane",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c15:native:harbor",
+      "phrase": "harbor",
+      "target_class": "harbor",
+      "class_index": 15,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_iSAID.txt",
+      "immutable": true
+    },
+    {
+      "id": "c15:d1:port",
+      "phrase": "port",
+      "target_class": "harbor",
+      "class_index": 15,
+      "parent": "c15:native:harbor",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c15:d1:dock",
+      "phrase": "dock",
+      "target_class": "harbor",
+      "class_index": 15,
+      "parent": "c15:native:harbor",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c15:d1:harbor_ship",
+      "phrase": "harbor ship",
+      "target_class": "harbor",
+      "class_index": 15,
+      "parent": "c15:native:harbor",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c15:d1:pier",
+      "phrase": "pier",
+      "target_class": "harbor",
+      "class_index": 15,
+      "parent": "c15:native:harbor",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c15:d1:sports_field",
+      "phrase": "sports field",
+      "target_class": "harbor",
+      "class_index": 15,
+      "parent": "c15:native:harbor",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c15:d1:sports_diamond",
+      "phrase": "sports diamond",
+      "target_class": "harbor",
+      "class_index": 15,
+      "parent": "c15:native:harbor",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c15:d1:sports_court",
+      "phrase": "sports court",
+      "target_class": "harbor",
+      "class_index": 15,
+      "parent": "c15:native:harbor",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c15:d1:harbor_area",
+      "phrase": "harbor area",
+      "target_class": "harbor",
+      "class_index": 15,
+      "parent": "c15:native:harbor",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c15:d1:airport_plane",
+      "phrase": "airport plane",
+      "target_class": "harbor",
+      "class_index": 15,
+      "parent": "c15:native:harbor",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c15:d1:ship_docking_area",
+      "phrase": "ship docking area",
+      "target_class": "harbor",
+      "class_index": 15,
+      "parent": "c15:native:harbor",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    },
+    {
+      "id": "c15:d1:coastal_port_facility",
+      "phrase": "coastal port facility",
+      "target_class": "harbor",
+      "class_index": 15,
+      "parent": "c15:native:harbor",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "calibrated_prompts/candidate_pools/isaid_candidate_pool.json",
+      "immutable": false
+    }
+  ],
+  "classes": [
+    {
+      "class_index": 0,
+      "class_name": "background",
+      "native_anchor_ids": [
+        "c0:native:background"
+      ],
+      "candidate_child_ids": [
+        "c0:d1:land_cover",
+        "c0:d1:clutter",
+        "c0:d1:background_clutter",
+        "c0:d1:miscellaneous_object",
+        "c0:d1:scattered_small_objects",
+        "c0:d1:cluttered_ground",
+        "c0:d1:other",
+        "c0:d1:mixed",
+        "c0:d1:sky",
+        "c0:d1:urban_clutter",
+        "c0:d1:unstructured_clutter",
+        "c0:d1:unlabeled_background",
+        "c0:d1:small_clutter",
+        "c0:d1:scene_clutter",
+        "c0:d1:scene_background",
+        "c0:d1:other_object",
+        "c0:d1:mixed_debris"
+      ]
+    },
+    {
+      "class_index": 1,
+      "class_name": "ship",
+      "native_anchor_ids": [
+        "c1:native:ship"
+      ],
+      "candidate_child_ids": [
+        "c1:d1:vessel",
+        "c1:d1:boat",
+        "c1:d1:harbor_ship",
+        "c1:d1:ship_hull",
+        "c1:d1:moored_ship",
+        "c1:d1:large_vessel",
+        "c1:d1:ship_from_above",
+        "c1:d1:ship_docking_area"
+      ]
+    },
+    {
+      "class_index": 2,
+      "class_name": "store tank",
+      "native_anchor_ids": [
+        "c2:native:store_tank"
+      ],
+      "candidate_child_ids": []
+    },
+    {
+      "class_index": 3,
+      "class_name": "baseball diamond",
+      "native_anchor_ids": [
+        "c3:native:baseball_diamond"
+      ],
+      "candidate_child_ids": [
+        "c3:d1:tennis_court",
+        "c3:d1:basketball_court",
+        "c3:d1:soccer_ball_field",
+        "c3:d1:sports_field",
+        "c3:d1:sports_court",
+        "c3:d1:sports_diamond",
+        "c3:d1:baseball_field",
+        "c3:d1:court_surface",
+        "c3:d1:baseball_infield",
+        "c3:d1:rectangular_tennis_court",
+        "c3:d1:rectangular_basketball_court",
+        "c3:d1:marked_basketball_court",
+        "c3:d1:green_tennis_court",
+        "c3:d1:diamond_shaped_field",
+        "c3:d1:court_with_boundary_lines"
+      ]
+    },
+    {
+      "class_index": 4,
+      "class_name": "tennis court",
+      "native_anchor_ids": [
+        "c4:native:tennis_court"
+      ],
+      "candidate_child_ids": [
+        "c4:d1:basketball_court",
+        "c4:d1:baseball_diamond",
+        "c4:d1:soccer_ball_field",
+        "c4:d1:sports_field",
+        "c4:d1:sports_court",
+        "c4:d1:sports_diamond",
+        "c4:d1:baseball_field",
+        "c4:d1:court_surface",
+        "c4:d1:baseball_infield",
+        "c4:d1:rectangular_tennis_court",
+        "c4:d1:rectangular_basketball_court",
+        "c4:d1:marked_basketball_court",
+        "c4:d1:green_tennis_court",
+        "c4:d1:diamond_shaped_field",
+        "c4:d1:court_with_boundary_lines"
+      ]
+    },
+    {
+      "class_index": 5,
+      "class_name": "basketball court",
+      "native_anchor_ids": [
+        "c5:native:basketball_court"
+      ],
+      "candidate_child_ids": [
+        "c5:d1:tennis_court",
+        "c5:d1:baseball_diamond",
+        "c5:d1:soccer_ball_field",
+        "c5:d1:sports_field",
+        "c5:d1:sports_court",
+        "c5:d1:sports_diamond",
+        "c5:d1:baseball_field",
+        "c5:d1:court_surface",
+        "c5:d1:baseball_infield",
+        "c5:d1:rectangular_tennis_court",
+        "c5:d1:rectangular_basketball_court",
+        "c5:d1:marked_basketball_court",
+        "c5:d1:green_tennis_court",
+        "c5:d1:diamond_shaped_field",
+        "c5:d1:court_with_boundary_lines"
+      ]
+    },
+    {
+      "class_index": 6,
+      "class_name": "ground track field",
+      "native_anchor_ids": [
+        "c6:native:ground_track_field"
+      ],
+      "candidate_child_ids": []
+    },
+    {
+      "class_index": 7,
+      "class_name": "bridge",
+      "native_anchor_ids": [
+        "c7:native:bridge"
+      ],
+      "candidate_child_ids": [
+        "c7:d1:road_bridge",
+        "c7:d1:elevated_bridge",
+        "c7:d1:bridge_deck",
+        "c7:d1:linear_bridge_span",
+        "c7:d1:bridge_over_water"
+      ]
+    },
+    {
+      "class_index": 8,
+      "class_name": "large vehicle",
+      "native_anchor_ids": [
+        "c8:native:large_vehicle"
+      ],
+      "candidate_child_ids": [
+        "c8:d1:car",
+        "c8:d1:small_vehicle",
+        "c8:d1:vehicle_object",
+        "c8:d1:vehicle",
+        "c8:d1:truck",
+        "c8:d1:bus",
+        "c8:d1:parked_vehicle",
+        "c8:d1:parked_car",
+        "c8:d1:small_car",
+        "c8:d1:automobile",
+        "c8:d1:heavy_vehicle",
+        "c8:d1:cargo_truck",
+        "c8:d1:vehicle_lane",
+        "c8:d1:road_vehicle",
+        "c8:d1:compact_vehicle",
+        "c8:d1:compact_car",
+        "c8:d1:car_roof"
+      ]
+    },
+    {
+      "class_index": 9,
+      "class_name": "small vehicle",
+      "native_anchor_ids": [
+        "c9:native:small_vehicle"
+      ],
+      "candidate_child_ids": [
+        "c9:d1:car",
+        "c9:d1:vehicle_object",
+        "c9:d1:vehicle",
+        "c9:d1:parked_vehicle",
+        "c9:d1:parked_car",
+        "c9:d1:small_car",
+        "c9:d1:automobile",
+        "c9:d1:compact_vehicle",
+        "c9:d1:vehicle_lane",
+        "c9:d1:road_vehicle",
+        "c9:d1:heavy_vehicle",
+        "c9:d1:compact_car",
+        "c9:d1:car_roof",
+        "c9:d1:parked_small_vehicle",
+        "c9:d1:bright_vehicle",
+        "c9:d1:vehicle_from_above",
+        "c9:d1:tiny_vehicle_object"
+      ]
+    },
+    {
+      "class_index": 10,
+      "class_name": "helicopter",
+      "native_anchor_ids": [
+        "c10:native:helicopter"
+      ],
+      "candidate_child_ids": [
+        "c10:d1:small_helicopter",
+        "c10:d1:rotor_aircraft",
+        "c10:d1:helicopter_pad_object",
+        "c10:d1:helicopter_from_above"
+      ]
+    },
+    {
+      "class_index": 11,
+      "class_name": "swimming pool",
+      "native_anchor_ids": [
+        "c11:native:swimming_pool"
+      ],
+      "candidate_child_ids": [
+        "c11:d1:water",
+        "c11:d1:pool",
+        "c11:d1:river",
+        "c11:d1:pond",
+        "c11:d1:lake",
+        "c11:d1:water_body",
+        "c11:d1:river_basin",
+        "c11:d1:open_water",
+        "c11:d1:canal_water",
+        "c11:d1:smooth_water_region",
+        "c11:d1:continuous_water_surface",
+        "c11:d1:bridge_over_water",
+        "c11:d1:dark_water_area"
+      ]
+    },
+    {
+      "class_index": 12,
+      "class_name": "roundabout",
+      "native_anchor_ids": [
+        "c12:native:roundabout"
+      ],
+      "candidate_child_ids": [
+        "c12:d1:traffic_circle",
+        "c12:d1:road_roundabout",
+        "c12:d1:circular_road_junction",
+        "c12:d1:central_traffic_island"
+      ]
+    },
+    {
+      "class_index": 13,
+      "class_name": "soccer ball field",
+      "native_anchor_ids": [
+        "c13:native:soccer_ball_field"
+      ],
+      "candidate_child_ids": []
+    },
+    {
+      "class_index": 14,
+      "class_name": "plane",
+      "native_anchor_ids": [
+        "c14:native:plane"
+      ],
+      "candidate_child_ids": [
+        "c14:d1:aircraft",
+        "c14:d1:airplane",
+        "c14:d1:winged_aircraft",
+        "c14:d1:rotor_aircraft",
+        "c14:d1:parked_aircraft",
+        "c14:d1:airport_plane",
+        "c14:d1:aircraft_from_above",
+        "c14:d1:bright_roof_plane"
+      ]
+    },
+    {
+      "class_index": 15,
+      "class_name": "harbor",
+      "native_anchor_ids": [
+        "c15:native:harbor"
+      ],
+      "candidate_child_ids": [
+        "c15:d1:port",
+        "c15:d1:dock",
+        "c15:d1:harbor_ship",
+        "c15:d1:pier",
+        "c15:d1:sports_field",
+        "c15:d1:sports_diamond",
+        "c15:d1:sports_court",
+        "c15:d1:harbor_area",
+        "c15:d1:airport_plane",
+        "c15:d1:ship_docking_area",
+        "c15:d1:coastal_port_facility"
+      ]
+    }
+  ]
+}

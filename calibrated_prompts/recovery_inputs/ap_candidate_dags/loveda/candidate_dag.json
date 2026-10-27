@@ -1,0 +1,866 @@
+{
+  "schema": "ap_dag_candidate_dag_v1",
+  "dataset": "loveda",
+  "candidate_source": "analysis/loveda_dag_corrected_candidates.json",
+  "candidate_source_sha256": "9d7adaf9d05ba579557cd9ce8d539ebb67b68660afe31d8c6126c3e884bf726b",
+  "native_source": "configs/classes/cls_loveda.txt",
+  "native_source_sha256": "877c2b7901bd5a539025211e13d849bf29ba868d549b905d30c74b071e3d04d9",
+  "source_metadata": {
+    "schema": null,
+    "labels_used": false,
+    "validation_used": false
+  },
+  "max_depth": 3,
+  "native_anchors_immutable": true,
+  "nodes": [
+    {
+      "id": "c0:native:background",
+      "phrase": "background",
+      "target_class": "background",
+      "class_index": 0,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_loveda.txt",
+      "immutable": true
+    },
+    {
+      "id": "c1:native:building",
+      "phrase": "building",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_loveda.txt",
+      "immutable": true
+    },
+    {
+      "id": "c1:native:house",
+      "phrase": "house",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_loveda.txt",
+      "immutable": true
+    },
+    {
+      "id": "c1:d1:building_rooftop",
+      "phrase": "building rooftop",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": "c1:native:building",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:urban_building",
+      "phrase": "urban building",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": "c1:native:building",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:building_footprint",
+      "phrase": "building footprint",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": "c1:native:building",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:rectangular_building",
+      "phrase": "rectangular building",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": "c1:native:building",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:residential_building",
+      "phrase": "residential building",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": "c1:native:building",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:industrial_building",
+      "phrase": "industrial building",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": "c1:native:building",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:building_block",
+      "phrase": "building block",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": "c1:native:building",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:rooftop",
+      "phrase": "rooftop",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": "c1:native:building",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c1:d1:urban_roof",
+      "phrase": "urban roof",
+      "target_class": "building",
+      "class_index": 1,
+      "parent": "c1:native:building",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:native:road",
+      "phrase": "road",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_loveda.txt",
+      "immutable": true
+    },
+    {
+      "id": "c2:d1:asphalt_road",
+      "phrase": "asphalt road",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "material",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:paved_road",
+      "phrase": "paved road",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "material",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:street",
+      "phrase": "street",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:paved_surface",
+      "phrase": "paved surface",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:pavement",
+      "phrase": "pavement",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:path",
+      "phrase": "path",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:sidewalk",
+      "phrase": "sidewalk",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:linear_road_corridor",
+      "phrase": "linear road corridor",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:connected_paved_path",
+      "phrase": "connected paved path",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "material",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:narrow_paved_road",
+      "phrase": "narrow paved road",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "appearance",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c2:d1:road_surface",
+      "phrase": "road surface",
+      "target_class": "road",
+      "class_index": 2,
+      "parent": "c2:native:road",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:native:water",
+      "phrase": "water",
+      "target_class": "water",
+      "class_index": 3,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_loveda.txt",
+      "immutable": true
+    },
+    {
+      "id": "c3:d1:water_body",
+      "phrase": "water body",
+      "target_class": "water",
+      "class_index": 3,
+      "parent": "c3:native:water",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:river",
+      "phrase": "river",
+      "target_class": "water",
+      "class_index": 3,
+      "parent": "c3:native:water",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:pond",
+      "phrase": "pond",
+      "target_class": "water",
+      "class_index": 3,
+      "parent": "c3:native:water",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:lake",
+      "phrase": "lake",
+      "target_class": "water",
+      "class_index": 3,
+      "parent": "c3:native:water",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:continuous_water_surface",
+      "phrase": "continuous water surface",
+      "target_class": "water",
+      "class_index": 3,
+      "parent": "c3:native:water",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:smooth_water_region",
+      "phrase": "smooth water region",
+      "target_class": "water",
+      "class_index": 3,
+      "parent": "c3:native:water",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:dark_water_area",
+      "phrase": "dark water area",
+      "target_class": "water",
+      "class_index": 3,
+      "parent": "c3:native:water",
+      "depth": 1,
+      "relation": "appearance",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:open_water",
+      "phrase": "open water",
+      "target_class": "water",
+      "class_index": 3,
+      "parent": "c3:native:water",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:canal_water",
+      "phrase": "canal water",
+      "target_class": "water",
+      "class_index": 3,
+      "parent": "c3:native:water",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c3:d1:river_basin",
+      "phrase": "river basin",
+      "target_class": "water",
+      "class_index": 3,
+      "parent": "c3:native:water",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:native:barren",
+      "phrase": "barren",
+      "target_class": "barren",
+      "class_index": 4,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_loveda.txt",
+      "immutable": true
+    },
+    {
+      "id": "c4:native:bareland",
+      "phrase": "bareland",
+      "target_class": "barren",
+      "class_index": 4,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_loveda.txt",
+      "immutable": true
+    },
+    {
+      "id": "c4:native:soil",
+      "phrase": "soil",
+      "target_class": "barren",
+      "class_index": 4,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_loveda.txt",
+      "immutable": true
+    },
+    {
+      "id": "c4:d1:bare_soil",
+      "phrase": "bare soil",
+      "target_class": "barren",
+      "class_index": 4,
+      "parent": "c4:native:barren",
+      "depth": 1,
+      "relation": "material",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:wasteland",
+      "phrase": "wasteland",
+      "target_class": "barren",
+      "class_index": 4,
+      "parent": "c4:native:barren",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:exposed_earth",
+      "phrase": "exposed earth",
+      "target_class": "barren",
+      "class_index": 4,
+      "parent": "c4:native:barren",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:non_vegetated_soil",
+      "phrase": "non vegetated soil",
+      "target_class": "barren",
+      "class_index": 4,
+      "parent": "c4:native:barren",
+      "depth": 1,
+      "relation": "material",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:dry_bare_ground",
+      "phrase": "dry bare ground",
+      "target_class": "barren",
+      "class_index": 4,
+      "parent": "c4:native:barren",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:open_soil_patch",
+      "phrase": "open soil patch",
+      "target_class": "barren",
+      "class_index": 4,
+      "parent": "c4:native:barren",
+      "depth": 1,
+      "relation": "material",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c4:d1:sparse_barren_land",
+      "phrase": "sparse barren land",
+      "target_class": "barren",
+      "class_index": 4,
+      "parent": "c4:native:barren",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:native:forest",
+      "phrase": "forest",
+      "target_class": "forest",
+      "class_index": 5,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_loveda.txt",
+      "immutable": true
+    },
+    {
+      "id": "c5:native:tree",
+      "phrase": "tree",
+      "target_class": "forest",
+      "class_index": 5,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_loveda.txt",
+      "immutable": true
+    },
+    {
+      "id": "c5:d1:dense_forest",
+      "phrase": "dense forest",
+      "target_class": "forest",
+      "class_index": 5,
+      "parent": "c5:native:forest",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:natural_woodland",
+      "phrase": "natural woodland",
+      "target_class": "forest",
+      "class_index": 5,
+      "parent": "c5:native:forest",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:woodland",
+      "phrase": "woodland",
+      "target_class": "forest",
+      "class_index": 5,
+      "parent": "c5:native:forest",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:forest_canopy",
+      "phrase": "forest canopy",
+      "target_class": "forest",
+      "class_index": 5,
+      "parent": "c5:native:forest",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:tree_covered_region",
+      "phrase": "tree covered region",
+      "target_class": "forest",
+      "class_index": 5,
+      "parent": "c5:native:forest",
+      "depth": 1,
+      "relation": "appearance",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:continuous_tree_cover",
+      "phrase": "continuous tree cover",
+      "target_class": "forest",
+      "class_index": 5,
+      "parent": "c5:native:forest",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:dense_tree_canopy",
+      "phrase": "dense tree canopy",
+      "target_class": "forest",
+      "class_index": 5,
+      "parent": "c5:native:forest",
+      "depth": 1,
+      "relation": "part/structure",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:tree_cluster",
+      "phrase": "tree cluster",
+      "target_class": "forest",
+      "class_index": 5,
+      "parent": "c5:native:forest",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c5:d1:natural_forest_patch",
+      "phrase": "natural forest patch",
+      "target_class": "forest",
+      "class_index": 5,
+      "parent": "c5:native:forest",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c6:native:agricultural",
+      "phrase": "agricultural",
+      "target_class": "agricultural",
+      "class_index": 6,
+      "parent": null,
+      "depth": 0,
+      "relation": "native-anchor",
+      "source": "configs/classes/cls_loveda.txt",
+      "immutable": true
+    },
+    {
+      "id": "c6:d1:cropland",
+      "phrase": "cropland",
+      "target_class": "agricultural",
+      "class_index": 6,
+      "parent": "c6:native:agricultural",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c6:d1:farmland",
+      "phrase": "farmland",
+      "target_class": "agricultural",
+      "class_index": 6,
+      "parent": "c6:native:agricultural",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c6:d1:cultivated_field",
+      "phrase": "cultivated field",
+      "target_class": "agricultural",
+      "class_index": 6,
+      "parent": "c6:native:agricultural",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c6:d1:crop_field",
+      "phrase": "crop field",
+      "target_class": "agricultural",
+      "class_index": 6,
+      "parent": "c6:native:agricultural",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c6:d1:planted_field",
+      "phrase": "planted field",
+      "target_class": "agricultural",
+      "class_index": 6,
+      "parent": "c6:native:agricultural",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c6:d1:agriculture_land",
+      "phrase": "agriculture land",
+      "target_class": "agricultural",
+      "class_index": 6,
+      "parent": "c6:native:agricultural",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c6:d1:field_parcel",
+      "phrase": "field parcel",
+      "target_class": "agricultural",
+      "class_index": 6,
+      "parent": "c6:native:agricultural",
+      "depth": 1,
+      "relation": "scene context",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c6:d1:rectangular_farmland",
+      "phrase": "rectangular farmland",
+      "target_class": "agricultural",
+      "class_index": 6,
+      "parent": "c6:native:agricultural",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    },
+    {
+      "id": "c6:d1:rural_cultivated_area",
+      "phrase": "rural cultivated area",
+      "target_class": "agricultural",
+      "class_index": 6,
+      "parent": "c6:native:agricultural",
+      "depth": 1,
+      "relation": "synonym",
+      "source": "analysis/loveda_dag_corrected_candidates.json",
+      "immutable": false
+    }
+  ],
+  "classes": [
+    {
+      "class_index": 0,
+      "class_name": "background",
+      "native_anchor_ids": [
+        "c0:native:background"
+      ],
+      "candidate_child_ids": []
+    },
+    {
+      "class_index": 1,
+      "class_name": "building",
+      "native_anchor_ids": [
+        "c1:native:building",
+        "c1:native:house"
+      ],
+      "candidate_child_ids": [
+        "c1:d1:building_rooftop",
+        "c1:d1:urban_building",
+        "c1:d1:building_footprint",
+        "c1:d1:rectangular_building",
+        "c1:d1:residential_building",
+        "c1:d1:industrial_building",
+        "c1:d1:building_block",
+        "c1:d1:rooftop",
+        "c1:d1:urban_roof"
+      ]
+    },
+    {
+      "class_index": 2,
+      "class_name": "road",
+      "native_anchor_ids": [
+        "c2:native:road"
+      ],
+      "candidate_child_ids": [
+        "c2:d1:asphalt_road",
+        "c2:d1:paved_road",
+        "c2:d1:street",
+        "c2:d1:paved_surface",
+        "c2:d1:pavement",
+        "c2:d1:path",
+        "c2:d1:sidewalk",
+        "c2:d1:linear_road_corridor",
+        "c2:d1:connected_paved_path",
+        "c2:d1:narrow_paved_road",
+        "c2:d1:road_surface"
+      ]
+    },
+    {
+      "class_index": 3,
+      "class_name": "water",
+      "native_anchor_ids": [
+        "c3:native:water"
+      ],
+      "candidate_child_ids": [
+        "c3:d1:water_body",
+        "c3:d1:river",
+        "c3:d1:pond",
+        "c3:d1:lake",
+        "c3:d1:continuous_water_surface",
+        "c3:d1:smooth_water_region",
+        "c3:d1:dark_water_area",
+        "c3:d1:open_water",
+        "c3:d1:canal_water",
+        "c3:d1:river_basin"
+      ]
+    },
+    {
+      "class_index": 4,
+      "class_name": "barren",
+      "native_anchor_ids": [
+        "c4:native:barren",
+        "c4:native:bareland",
+        "c4:native:soil"
+      ],
+      "candidate_child_ids": [
+        "c4:d1:bare_soil",
+        "c4:d1:wasteland",
+        "c4:d1:exposed_earth",
+        "c4:d1:non_vegetated_soil",
+        "c4:d1:dry_bare_ground",
+        "c4:d1:open_soil_patch",
+        "c4:d1:sparse_barren_land"
+      ]
+    },
+    {
+      "class_index": 5,
+      "class_name": "forest",
+      "native_anchor_ids": [
+        "c5:native:forest",
+        "c5:native:tree"
+      ],
+      "candidate_child_ids": [
+        "c5:d1:dense_forest",
+        "c5:d1:natural_woodland",
+        "c5:d1:woodland",
+        "c5:d1:forest_canopy",
+        "c5:d1:tree_covered_region",
+        "c5:d1:continuous_tree_cover",
+        "c5:d1:dense_tree_canopy",
+        "c5:d1:tree_cluster",
+        "c5:d1:natural_forest_patch"
+      ]
+    },
+    {
+      "class_index": 6,
+      "class_name": "agricultural",
+      "native_anchor_ids": [
+        "c6:native:agricultural"
+      ],
+      "candidate_child_ids": [
+        "c6:d1:cropland",
+        "c6:d1:farmland",
+        "c6:d1:cultivated_field",
+        "c6:d1:crop_field",
+        "c6:d1:planted_field",
+        "c6:d1:agriculture_land",
+        "c6:d1:field_parcel",
+        "c6:d1:rectangular_farmland",
+        "c6:d1:rural_cultivated_area"
+      ]
+    }
+  ]
+}
